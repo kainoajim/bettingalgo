@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>Value Bets</title>
+</head>
+<body>
+    <h1>Today's Value Bets</h1>
+    <ul>
+    {% for bet in value_bets %}
+        <li>{{ bet.game }} - Sportsbook Line: {{ bet.sportsbook_line }}, Your Line: {{ bet.your_line }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
