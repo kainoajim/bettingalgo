@@ -1,0 +1,303 @@
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+1,2022-09-08,Buffalo Bills,Los Angeles Rams,31,10,413,243,4,3
+1,2022-09-11,New Orleans Saints,Atlanta Falcons,27,26,385,416,1,2
+1,2022-09-11,Cleveland Browns,Carolina Panthers,26,24,355,261,0,1
+1,2022-09-11,Chicago Bears,San Francisco 49ers,19,10,204,331,1,2
+1,2022-09-11,Pittsburgh Steelers,Cincinnati Bengals,23,20,267,432,0,5
+1,2022-09-11,Houston Texans,Indianapolis Colts,20,20,299,517,1,2
+1,2022-09-11,Philadelphia Eagles,Detroit Lions,38,35,455,386,0,1
+1,2022-09-11,Washington Commanders,Jacksonville Jaguars,28,22,390,383,3,1
+1,2022-09-11,Miami Dolphins,New England Patriots,20,7,307,271,0,3
+1,2022-09-11,Baltimore Ravens,New York Jets,24,9,274,380,1,2
+1,2022-09-11,Kansas City Chiefs,Arizona Cardinals,44,21,488,282,1,0
+1,2022-09-11,Minnesota Vikings,Green Bay Packers,23,7,395,338,0,2
+1,2022-09-11,New York Giants,Tennessee Titans,21,20,394,359,2,1
+1,2022-09-11,Los Angeles Chargers,Las Vegas Raiders,24,19,355,320,0,3
+1,2022-09-11,Tampa Bay Buccaneers,Dallas Cowboys,19,3,347,244,1,1
+1,2022-09-12,Seattle Seahawks,Denver Broncos,17,16,253,433,1,2
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+2,2022-09-15,Kansas City Chiefs,Los Angeles Chargers,27,24,319,401,0,1
+2,2022-09-18,New York Giants,Carolina Panthers,19,16,265,275,0,2
+2,2022-09-18,New York Jets,Cleveland Browns,31,30,402,405,1,1
+2,2022-09-18,Jacksonville Jaguars,Indianapolis Colts,24,0,331,218,0,3
+2,2022-09-18,Detroit Lions,Washington Commanders,36,27,425,396,0,1
+2,2022-09-18,Miami Dolphins,Baltimore Ravens,42,38,547,473,2,0
+2,2022-09-18,Tampa Bay Buccaneers,New Orleans Saints,20,10,260,308,1,5
+2,2022-09-18,New England Patriots,Pittsburgh Steelers,17,14,376,243,1,2
+2,2022-09-18,Los Angeles Rams,Atlanta Falcons,31,27,337,261,3,3
+2,2022-09-18,San Francisco 49ers,Seattle Seahawks,27,7,373,216,0,3
+2,2022-09-18,Dallas Cowboys,Cincinnati Bengals,20,17,337,254,1,0
+2,2022-09-18,Arizona Cardinals,Las Vegas Raiders,29,23,413,324,1,1
+2,2022-09-18,Denver Broncos,Houston Texans,16,9,350,234,1,0
+2,2022-09-18,Green Bay Packers,Chicago Bears,27,10,414,228,1,1
+2,2022-09-19,Buffalo Bills,Tennessee Titans,41,7,414,187,0,4
+2,2022-09-19,Philadelphia Eagles,Minnesota Vikings,24,7,486,264,1,3
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+3,2022-09-22,Cleveland Browns,Pittsburgh Steelers,29,17,376,308,0,1
+3,2022-09-25,Miami Dolphins,Buffalo Bills,21,19,212,497,0,1
+3,2022-09-25,Carolina Panthers,New Orleans Saints,22,14,293,426,0,3
+3,2022-09-25,Chicago Bears,Houston Texans,23,20,363,329,2,2
+3,2022-09-25,Cincinnati Bengals,New York Jets,27,12,330,328,1,4
+3,2022-09-25,Indianapolis Colts,Kansas City Chiefs,20,17,259,315,1,2
+3,2022-09-25,Minnesota Vikings,Detroit Lions,28,24,373,416,1,1
+3,2022-09-25,Baltimore Ravens,New England Patriots,37,26,394,447,2,4
+3,2022-09-25,Tennessee Titans,Las Vegas Raiders,24,22,361,396,1,1
+3,2022-09-25,Philadelphia Eagles,Washington Commanders,24,8,400,240,0,1
+3,2022-09-25,Jacksonville Jaguars,Los Angeles Chargers,38,10,413,312,0,2
+3,2022-09-25,Atlanta Falcons,Seattle Seahawks,27,23,386,420,2,1
+3,2022-09-25,Los Angeles Rams,Arizona Cardinals,20,12,339,365,1,0
+3,2022-09-25,Green Bay Packers,Tampa Bay Buccaneers,14,12,315,285,2,2
+3,2022-09-25,Denver Broncos,San Francisco 49ers,11,10,261,267,0,3
+3,2022-09-26,Dallas Cowboys,New York Giants,23,16,391,336,0,1
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+4,2022-09-29,Cincinnati Bengals,Miami Dolphins,27,15,371,378,0,2
+4,2022-10-02,Minnesota Vikings,New Orleans Saints,28,25,344,338,1,2
+4,2022-10-02,Atlanta Falcons,Cleveland Browns,23,20,333,403,1,2
+4,2022-10-02,Buffalo Bills,Baltimore Ravens,23,20,326,296,2,2
+4,2022-10-02,New York Giants,Chicago Bears,20,12,333,304,2,3
+4,2022-10-02,Tennessee Titans,Indianapolis Colts,24,17,243,365,0,3
+4,2022-10-02,Dallas Cowboys,Washington Commanders,25,10,279,297,0,2
+4,2022-10-02,Seattle Seahawks,Detroit Lions,48,45,555,520,1,2
+4,2022-10-02,Los Angeles Chargers,Houston Texans,34,24,419,346,1,2
+4,2022-10-02,Philadelphia Eagles,Jacksonville Jaguars,29,21,401,219,1,5
+4,2022-10-02,New York Jets,Pittsburgh Steelers,24,20,348,297,2,4
+4,2022-10-02,Arizona Cardinals,Carolina Panthers,26,16,338,220,1,3
+4,2022-10-02,Las Vegas Raiders,Denver Broncos,32,23,385,299,0,1
+4,2022-10-02,Green Bay Packers,New England Patriots,27,24,443,271,2,1
+4,2022-10-02,Kansas City Chiefs,Tampa Bay Buccaneers,41,31,417,376,1,2
+4,2022-10-03,San Francisco 49ers,Los Angeles Rams,24,9,327,257,0,2
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+5,2022-10-06,Indianapolis Colts,Denver Broncos,12,9,306,375,2,2
+5,2022-10-09,New York Giants,Green Bay Packers,27,22,338,301,0,0
+5,2022-10-09,Tampa Bay Buccaneers,Atlanta Falcons,21,15,420,261,0,0
+5,2022-10-09,Buffalo Bills,Pittsburgh Steelers,38,3,552,364,2,2
+5,2022-10-09,Minnesota Vikings,Chicago Bears,29,22,429,271,1,1
+5,2022-10-09,Los Angeles Chargers,Cleveland Browns,30,28,465,443,0,1
+5,2022-10-09,New England Patriots,Detroit Lions,29,0,364,312,1,2
+5,2022-10-09,Houston Texans,Jacksonville Jaguars,13,6,248,422,0,2
+5,2022-10-09,New York Jets,Miami Dolphins,40,17,322,295,0,2
+5,2022-10-09,New Orleans Saints,Seattle Seahawks,39,32,438,396,2,1
+5,2022-10-09,Tennessee Titans,Washington Commanders,21,17,241,385,0,1
+5,2022-10-09,San Francisco 49ers,Carolina Panthers,37,15,397,308,1,1
+5,2022-10-09,Philadelphia Eagles,Arizona Cardinals,20,17,357,363,0,1
+5,2022-10-09,Dallas Cowboys,Los Angeles Rams,22,10,239,323,0,3
+5,2022-10-09,Baltimore Ravens,Cincinnati Bengals,19,17,325,291,1,1
+5,2022-10-10,Kansas City Chiefs,Las Vegas Raiders,30,29,368,378,0,0
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+6,2022-10-13,Washington Commanders,Chicago Bears,12,7,214,391,0,2
+6,2022-10-16,Atlanta Falcons,San Francisco 49ers,28,14,289,346,0,3
+6,2022-10-16,Cincinnati Bengals,New Orleans Saints,30,26,348,399,1,0
+6,2022-10-16,New England Patriots,Cleveland Browns,38,15,399,328,1,4
+6,2022-10-16,Indianapolis Colts,Jacksonville Jaguars,34,27,434,379,0,1
+6,2022-10-16,New York Jets,Green Bay Packers,27,10,278,278,0,1
+6,2022-10-16,Minnesota Vikings,Miami Dolphins,24,16,234,458,0,3
+6,2022-10-16,New York Giants,Baltimore Ravens,24,20,238,406,1,2
+6,2022-10-16,Pittsburgh Steelers,Tampa Bay Buccaneers,20,18,270,304,0,0
+6,2022-10-16,Los Angeles Rams,Carolina Panthers,24,10,360,203,1,1
+6,2022-10-16,Seattle Seahawks,Arizona Cardinals,19,9,296,315,1,2
+6,2022-10-16,Buffalo Bills,Kansas City Chiefs,24,20,443,387,1,2
+6,2022-10-16,Philadelphia Eagles,Dallas Cowboys,26,17,268,315,0,3
+6,2022-10-17,Los Angeles Chargers,Denver Broncos,19,16,297,258,1,1
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+7,2022-10-20,Arizona Cardinals,New Orleans Saints,42,34,326,494,0,3
+7,2022-10-23,Cincinnati Bengals,Atlanta Falcons,35,17,537,214,0,0
+7,2022-10-23,Carolina Panthers,Tampa Bay Buccaneers,21,3,343,322,0,0
+7,2022-10-23,Baltimore Ravens,Cleveland Browns,23,20,254,336,1,2
+7,2022-10-23,Tennessee Titans,Indianapolis Colts,19,10,254,292,1,3
+7,2022-10-23,Dallas Cowboys,Detroit Lions,24,6,330,312,1,5
+7,2022-10-23,Washington Commanders,Green Bay Packers,23,21,364,232,1,1
+7,2022-10-23,New York Giants,Jacksonville Jaguars,23,17,436,452,0,1
+7,2022-10-23,Las Vegas Raiders,Houston Texans,38,20,400,404,0,1
+7,2022-10-23,New York Jets,Denver Broncos,16,9,260,324,0,1
+7,2022-10-23,Kansas City Chiefs,San Francisco 49ers,44,23,529,444,2,3
+7,2022-10-23,Seattle Seahawks,Los Angeles Chargers,37,23,404,329,2,2
+7,2022-10-23,Miami Dolphins,Pittsburgh Steelers,16,10,372,341,0,3
+7,2022-10-24,Chicago Bears,New England Patriots,33,14,390,260,1,4
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+8,2022-10-27,Baltimore Ravens,Tampa Bay Buccaneers,27,22,453,349,0,1
+8,2022-10-30,Denver Broncos,Jacksonville Jaguars,21,17,331,305,1,2
+8,2022-10-30,Miami Dolphins,Detroit Lions,31,27,476,393,1,0
+8,2022-10-30,Philadelphia Eagles,Pittsburgh Steelers,35,13,401,302,0,2
+8,2022-10-30,Atlanta Falcons,Carolina Panthers,37,34,406,478,2,1
+8,2022-10-30,Dallas Cowboys,Chicago Bears,49,29,442,371,1,1
+8,2022-10-30,Minnesota Vikings,Arizona Cardinals,34,26,381,375,1,3
+8,2022-10-30,New Orleans Saints,Las Vegas Raiders,24,0,367,183,0,1
+8,2022-10-30,New England Patriots,New York Jets,22,17,288,387,1,3
+8,2022-10-30,Tennessee Titans,Houston Texans,17,10,354,161,2,1
+8,2022-10-30,San Francisco 49ers,Los Angeles Rams,31,14,368,223,0,0
+8,2022-10-30,Washington Commanders,Indianapolis Colts,17,16,362,324,1,2
+8,2022-10-30,Seattle Seahawks,New York Giants,27,13,277,225,1,2
+8,2022-10-30,Buffalo Bills,Green Bay Packers,27,17,369,398,2,1
+8,2022-10-31,Cleveland Browns,Cincinnati Bengals,32,13,440,229,2,2
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+9,2022-11-03,Philadelphia Eagles,Houston Texans,29,17,360,303,1,2
+9,2022-11-06,New York Jets,Buffalo Bills,20,17,310,317,1,2
+9,2022-11-06,Detroit Lions,Green Bay Packers,15,9,254,389,1,3
+9,2022-11-06,Minnesota Vikings,Washington Commanders,20,17,301,263,1,1
+9,2022-11-06,Los Angeles Chargers,Atlanta Falcons,20,17,336,315,2,2
+9,2022-11-06,Cincinnati Bengals,Carolina Panthers,42,21,464,228,0,3
+9,2022-11-06,Miami Dolphins,Chicago Bears,35,32,379,368,0,0
+9,2022-11-06,New England Patriots,Indianapolis Colts,26,3,203,121,1,1
+9,2022-11-06,Jacksonville Jaguars,Las Vegas Raiders,27,20,403,321,1,1
+9,2022-11-06,Seattle Seahawks,Arizona Cardinals,31,21,421,262,1,1
+9,2022-11-06,Tampa Bay Buccaneers,Los Angeles Rams,16,13,323,206,0,0
+9,2022-11-06,Kansas City Chiefs,Tennessee Titans,20,17,499,229,1,0
+9,2022-11-07,Baltimore Ravens,New Orleans Saints,27,13,319,243,0,1
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+10,2022-11-10,Carolina Panthers,Atlanta Falcons,25,15,333,291,0,1
+10,2022-11-13,Tampa Bay Buccaneers,Seattle Seahawks,21,16,419,283,2,1
+10,2022-11-13,Minnesota Vikings,Buffalo Bills,33,30,481,486,2,4
+10,2022-11-13,Miami Dolphins,Cleveland Browns,39,17,491,297,0,1
+10,2022-11-13,Tennessee Titans,Denver Broncos,17,10,307,313,1,1
+10,2022-11-13,New York Giants,Houston Texans,24,16,367,387,0,2
+10,2022-11-13,Detroit Lions,Chicago Bears,31,30,323,408,0,1
+10,2022-11-13,Kansas City Chiefs,Jacksonville Jaguars,27,17,486,315,3,0
+10,2022-11-13,Pittsburgh Steelers,New Orleans Saints,20,10,379,186,0,2
+10,2022-11-13,Indianapolis Colts,Las Vegas Raiders,25,20,415,309,1,0
+10,2022-11-13,Green Bay Packers,Dallas Cowboys,31,28,415,421,2,2
+10,2022-11-13,Arizona Cardinals,Los Angeles Rams,27,17,298,256,0,2
+10,2022-11-13,San Francisco 49ers,Los Angeles Chargers,22,16,387,238,1,1
+10,2022-11-14,Washington Commanders,Philadelphia Eagles,32,21,330,264,2,4
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+11,2022-11-17,Tennessee Titans,Green Bay Packers,27,17,408,271,1,0
+11,2022-11-20,Buffalo Bills,Cleveland Browns,31,23,357,396,0,1
+11,2022-11-20,Detroit Lions,New York Giants,31,18,325,413,0,3
+11,2022-11-20,Washington Commanders,Houston Texans,23,10,344,148,0,2
+11,2022-11-20,New England Patriots,New York Jets,10,3,297,103,0,0
+11,2022-11-20,Atlanta Falcons,Chicago Bears,27,24,280,288,2,1
+11,2022-11-20,Baltimore Ravens,Carolina Panthers,13,3,308,205,1,3
+11,2022-11-20,Philadelphia Eagles,Indianapolis Colts,17,16,314,284,2,1
+11,2022-11-20,New Orleans Saints,Los Angeles Rams,27,20,323,336,0,0
+11,2022-11-20,Las Vegas Raiders,Denver Broncos,22,16,407,320,0,0
+11,2022-11-20,Cincinnati Bengals,Pittsburgh Steelers,37,30,408,351,2,0
+11,2022-11-20,Dallas Cowboys,Minnesota Vikings,40,3,458,183,0,1
+11,2022-11-20,Kansas City Chiefs,Los Angeles Chargers,30,27,485,365,1,2
+11,2022-11-21,San Francisco 49ers,Arizona Cardinals,38,10,387,314,0,2
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+12,2022-11-24,Buffalo Bills,Detroit Lions,28,25,401,326,1,2
+12,2022-11-24,Dallas Cowboys,New York Giants,28,20,430,300,2,0
+12,2022-11-24,Minnesota Vikings,New England Patriots,33,26,358,409,1,0
+12,2022-11-27,Cincinnati Bengals,Tennessee Titans,20,16,374,344,0,0
+12,2022-11-27,Cleveland Browns,Tampa Bay Buccaneers,23,17,367,325,1,0
+12,2022-11-27,Miami Dolphins,Houston Texans,30,15,339,210,1,3
+12,2022-11-27,Jacksonville Jaguars,Baltimore Ravens,28,27,332,415,1,2
+12,2022-11-27,Washington Commanders,Atlanta Falcons,19,13,314,332,1,1
+12,2022-11-27,Carolina Panthers,Denver Broncos,23,10,349,246,1,2
+12,2022-11-27,New York Jets,Chicago Bears,31,10,466,292,0,1
+12,2022-11-27,Las Vegas Raiders,Seattle Seahawks,40,34,576,372,2,2
+12,2022-11-27,Los Angeles Chargers,Arizona Cardinals,25,24,311,366,0,2
+12,2022-11-27,Kansas City Chiefs,Los Angeles Rams,26,10,437,198,2,2
+12,2022-11-27,San Francisco 49ers,New Orleans Saints,13,0,317,260,0,2
+12,2022-11-27,Philadelphia Eagles,Green Bay Packers,40,33,500,342,1,2
+12,2022-11-28,Pittsburgh Steelers,Indianapolis Colts,24,17,323,290,0,2
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+13,2022-12-01,Buffalo Bills,New England Patriots,24,10,355,242,1,0
+13,2022-12-04,Cleveland Browns,Houston Texans,27,14,304,283,2,4
+13,2022-12-04,Baltimore Ravens,Denver Broncos,10,9,285,272,2,0
+13,2022-12-04,Detroit Lions,Jacksonville Jaguars,40,14,437,266,0,1
+13,2022-12-04,Minnesota Vikings,New York Jets,27,22,287,486,0,2
+13,2022-12-04,Washington Commanders,New York Giants,20,20,411,316,1,1
+13,2022-12-04,Philadelphia Eagles,Tennessee Titans,35,10,453,209,0,0
+13,2022-12-04,Pittsburgh Steelers,Atlanta Falcons,19,16,351,306,0,1
+13,2022-12-04,Green Bay Packers,Chicago Bears,28,19,357,409,0,3
+13,2022-12-04,San Francisco 49ers,Miami Dolphins,33,17,351,308,1,4
+13,2022-12-04,Seattle Seahawks,Los Angeles Rams,27,23,438,319,2,2
+13,2022-12-04,Cincinnati Bengals,Kansas City Chiefs,27,24,431,349,0,1
+13,2022-12-04,Las Vegas Raiders,Los Angeles Chargers,27,20,404,386,2,1
+13,2022-12-04,Dallas Cowboys,Indianapolis Colts,54,19,385,309,1,5
+13,2022-12-05,Tampa Bay Buccaneers,New Orleans Saints,17,16,350,298,2,0
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+14,2022-12-08,Los Angeles Rams,Las Vegas Raiders,17,16,282,302,1,2
+14,2022-12-11,Buffalo Bills,New York Jets,20,12,232,309,0,2
+14,2022-12-11,Cincinnati Bengals,Cleveland Browns,23,10,363,344,1,1
+14,2022-12-11,Dallas Cowboys,Houston Texans,27,23,404,327,3,2
+14,2022-12-11,Detroit Lions,Minnesota Vikings,34,23,464,416,0,2
+14,2022-12-11,Jacksonville Jaguars,Tennessee Titans,36,22,428,364,0,4
+14,2022-12-11,Philadelphia Eagles,New York Giants,48,22,437,304,0,1
+14,2022-12-11,Baltimore Ravens,Pittsburgh Steelers,16,14,309,329,0,3
+14,2022-12-11,Kansas City Chiefs,Denver Broncos,34,28,431,320,3,2
+14,2022-12-11,Carolina Panthers,Seattle Seahawks,30,24,328,287,0,2
+14,2022-12-11,San Francisco 49ers,Tampa Bay Buccaneers,35,7,404,322,1,3
+14,2022-12-11,Los Angeles Chargers,Miami Dolphins,23,17,432,219,0,0
+14,2022-12-12,New England Patriots,Arizona Cardinals,27,13,328,323,1,2
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+15,2022-12-15,San Francisco 49ers,Seattle Seahawks,21,13,381,277,0,1
+15,2022-12-17,Minnesota Vikings,Indianapolis Colts,39,36,518,341,3,1
+15,2022-12-17,Cleveland Browns,Baltimore Ravens,13,3,283,324,0,2
+15,2022-12-17,Buffalo Bills,Miami Dolphins,32,29,446,405,1,0
+15,2022-12-18,New Orleans Saints,Atlanta Falcons,21,18,348,320,1,1
+15,2022-12-18,Pittsburgh Steelers,Carolina Panthers,24,16,325,209,0,0
+15,2022-12-18,Philadelphia Eagles,Chicago Bears,25,20,421,248,3,1
+15,2022-12-18,Jacksonville Jaguars,Dallas Cowboys,40,34,503,397,3,2
+15,2022-12-18,Detroit Lions,New York Jets,20,17,359,337,0,1
+15,2022-12-18,Kansas City Chiefs,Houston Texans,30,24,502,219,2,1
+15,2022-12-18,Denver Broncos,Arizona Cardinals,24,15,324,240,2,3
+15,2022-12-18,Las Vegas Raiders,New England Patriots,30,24,308,318,1,1
+15,2022-12-18,Cincinnati Bengals,Tampa Bay Buccaneers,34,23,237,396,1,4
+15,2022-12-18,Los Angeles Chargers,Tennessee Titans,17,14,365,284,2,1
+15,2022-12-18,New York Giants,Washington Commanders,20,12,288,387,0,2
+15,2022-12-19,Green Bay Packers,Los Angeles Rams,24,12,345,156,2,1
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+16,2022-12-22,Jacksonville Jaguars,New York Jets,19,3,365,227,1,2
+16,2022-12-24,Baltimore Ravens,Atlanta Falcons,17,9,299,327,0,1
+16,2022-12-24,Buffalo Bills,Chicago Bears,35,13,426,209,3,2
+16,2022-12-24,Carolina Panthers,Detroit Lions,37,23,570,381,0,1
+16,2022-12-24,Cincinnati Bengals,New England Patriots,22,18,442,285,3,1
+16,2022-12-24,New Orleans Saints,Cleveland Browns,17,10,244,249,1,1
+16,2022-12-24,Houston Texans,Tennessee Titans,19,14,285,272,1,3
+16,2022-12-24,Kansas City Chiefs,Seattle Seahawks,24,10,297,333,0,1
+16,2022-12-24,Minnesota Vikings,New York Giants,27,24,353,445,0,2
+16,2022-12-24,San Francisco 49ers,Washington Commanders,37,20,371,349,1,2
+16,2022-12-24,Dallas Cowboys,Philadelphia Eagles,40,34,419,442,1,4
+16,2022-12-24,Pittsburgh Steelers,Las Vegas Raiders,13,10,350,201,1,3
+16,2022-12-25,Green Bay Packers,Miami Dolphins,26,20,301,376,1,4
+16,2022-12-25,Los Angeles Rams,Denver Broncos,51,14,388,323,0,4
+16,2022-12-25,Tampa Bay Buccaneers,Arizona Cardinals,19,16,396,325,2,3
+16,2022-12-26,Los Angeles Chargers,Indianapolis Colts,20,3,314,173,2,3
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+17,2022-12-29,Dallas Cowboys,Tennessee Titans,27,13,361,317,3,2
+17,2023-01-01,Atlanta Falcons,Arizona Cardinals,20,19,298,339,1,0
+17,2023-01-01,Tampa Bay Buccaneers,Carolina Panthers,30,24,478,400,1,3
+17,2023-01-01,Detroit Lions,Chicago Bears,41,10,504,230,0,2
+17,2023-01-01,Cleveland Browns,Washington Commanders,24,10,301,260,0,3
+17,2023-01-01,New York Giants,Indianapolis Colts,38,10,394,252,1,1
+17,2023-01-01,Kansas City Chiefs,Denver Broncos,27,24,374,307,2,2
+17,2023-01-01,Jacksonville Jaguars,Houston Texans,31,3,337,277,2,1
+17,2023-01-01,New England Patriots,Miami Dolphins,23,21,249,333,0,2
+17,2023-01-01,New Orleans Saints,Philadelphia Eagles,20,10,313,313,1,1
+17,2023-01-01,Seattle Seahawks,New York Jets,23,6,346,279,0,3
+17,2023-01-01,San Francisco 49ers,Las Vegas Raiders,37,34,454,500,1,2
+17,2023-01-01,Green Bay Packers,Minnesota Vikings,41,17,315,346,0,4
+17,2023-01-01,Los Angeles Chargers,Los Angeles Rams,31,10,431,277,0,1
+17,2023-01-01,Pittsburgh Steelers,Baltimore Ravens,16,13,351,240,0,1
+Week,Date,Winner/tie,Loser/tie,Pts,Pts,YdsW,YdsL,TOW,TOL
+18,2023-01-07,Kansas City Chiefs,Las Vegas Raiders,31,13,349,279,0,2
+18,2023-01-07,Jacksonville Jaguars,Tennessee Titans,20,16,222,312,1,2
+18,2023-01-08,Buffalo Bills,New England Patriots,35,23,327,341,3,3
+18,2023-01-08,Cincinnati Bengals,Baltimore Ravens,27,16,257,386,1,4
+18,2023-01-08,Atlanta Falcons,Tampa Bay Buccaneers,30,17,382,222,1,1
+18,2023-01-08,Carolina Panthers,New Orleans Saints,10,7,203,304,2,1
+18,2023-01-08,Minnesota Vikings,Chicago Bears,29,13,482,259,2,2
+18,2023-01-08,Pittsburgh Steelers,Cleveland Browns,28,14,333,307,1,2
+18,2023-01-08,Houston Texans,Indianapolis Colts,32,31,360,398,3,3
+18,2023-01-08,Miami Dolphins,New York Jets,11,6,302,187,0,0
+18,2023-01-08,San Francisco 49ers,Arizona Cardinals,38,13,311,255,0,4
+18,2023-01-08,Washington Commanders,Dallas Cowboys,26,6,309,182,1,2
+18,2023-01-08,Denver Broncos,Los Angeles Chargers,31,28,471,352,2,2
+18,2023-01-08,Philadelphia Eagles,New York Giants,22,16,342,284,1,0
+18,2023-01-08,Seattle Seahawks,Los Angeles Rams,19,16,402,269,2,1
+18,2023-01-08,Detroit Lions,Green Bay Packers,20,16,323,291,0,2
+,Playoffs,,,,,,,,
+WildCard,2023-01-14,San Francisco 49ers,Seattle Seahawks,41,23,505,332,0,2
+WildCard,2023-01-14,Jacksonville Jaguars,Los Angeles Chargers,31,30,390,320,5,0
+WildCard,2023-01-15,Buffalo Bills,Miami Dolphins,34,31,423,231,3,2
+WildCard,2023-01-15,New York Giants,Minnesota Vikings,31,24,431,332,0,0
+WildCard,2023-01-15,Cincinnati Bengals,Baltimore Ravens,24,17,234,364,1,2
+WildCard,2023-01-16,Dallas Cowboys,Tampa Bay Buccaneers,31,14,425,386,0,1
+Division,2023-01-21,Kansas City Chiefs,Jacksonville Jaguars,27,20,362,349,0,2
+Division,2023-01-21,Philadelphia Eagles,New York Giants,38,7,416,227,0,1
+Division,2023-01-22,Cincinnati Bengals,Buffalo Bills,27,10,412,325,0,1
+Division,2023-01-22,San Francisco 49ers,Dallas Cowboys,19,12,312,282,1,2
+ConfChamp,2023-01-29,Philadelphia Eagles,San Francisco 49ers,31,7,269,164,0,3
+ConfChamp,2023-01-29,Kansas City Chiefs,Cincinnati Bengals,23,20,357,309,1,2
+SuperBowl,2023-02-12,Kansas City Chiefs,Philadelphia Eagles,38,35,340,417,0,1
