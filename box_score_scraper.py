@@ -8,7 +8,7 @@ df_game_urls = pd.read_csv('data/nba_game_urls.csv')
 game_urls = df_game_urls['Game_URL'].tolist()
 
 # List to store team stats data
-team_stats_data = []
+team_stats_data = pd.DataFrame()
 
 # Function to scrape both basic and advanced team stats for a single game
 def scrape_team_stats(game_url):
@@ -46,6 +46,7 @@ def scrape_team_stats(game_url):
                 raw_df = pd.read_html(str(table))[0]
                 df = _process_box(raw_df)
                 team_totals_row = df[df['PLAYER'] == 'Team Totals']
+                team_totals_row = team_totals_row.drop(team_totals_row.columns[0], axis=1)
                 if not team_totals_row.empty:
                     dfs.append(team_totals_row)
                 else:
@@ -75,13 +76,20 @@ def scrape_team_stats(game_url):
 
     # Optional: Add team labels or rename columns to make it clear which are basic and which are advanced
     # Rename columns to differentiate between basic and advanced stats (optional but helpful for clarity)
-    basic_cols = [f'{col}' for col in team1_basic.columns]
-    advanced_cols = [f'{col}' for col in team1_advanced.columns[1:]]  # Exclude PLAYER from advanced stats, since it's duplicated
-    team1_combined.columns = basic_cols + advanced_cols
-    team2_combined.columns = basic_cols + advanced_cols
+    # basic_cols = [f'{col}' for col in team1_basic.columns]
+    # advanced_cols = [f'{col}' for col in team1_advanced.columns[1:]]  # Exclude PLAYER from advanced stats, since it's duplicated
+    # team1_combined.columns = basic_cols + advanced_cols
+    # team2_combined.columns = basic_cols + advanced_cols
 
-    team_stats_data.append(team1_combined)
-    team_stats_data.append(team2_combined)
+    # Ensure data is 2D before appending
+    print(f"Team 1 combined shape: {team1_combined.shape}")
+    print(f"Team 2 combined shape: {team2_combined.shape}")
+
+    # team_stats_data.append(team1_combined)
+    # team_stats_data.append(team2_combined)
+
+    global team_stats_data
+    team_stats_data = pd.concat([team_stats_data, team1_combined, team2_combined], ignore_index=True)
     
 def _process_box(df):
     """ Perform basic processing on a box score - common to both methods
@@ -98,6 +106,8 @@ def _process_box(df):
         df.rename(columns = {'Tm': 'TEAM'}, inplace=True)
     reserve_index = df[df['PLAYER']=='Reserves'].index[0]
     df = df.drop(reserve_index).reset_index().drop('index', axis=1) 
+    # remove first column
+    # df = df.drop(df.columns[0], axis=1)
     # Add the team name as the first column
     # df.insert(0, 'Team', team_name)
     return df
@@ -117,9 +127,10 @@ columns = [
 ]
 
 # Convert the team stats data into a DataFrame
-df_team_stats = pd.DataFrame(team_stats_data, columns=columns)
+# print(f"Team 1 combined shape: {team_stats_data.shape}")
+# df_team_stats = pd.DataFrame(team_stats_data, columns=columns)
 
 # Save the combined basic and advanced stats to a CSV file
-df_team_stats.to_csv('data/nba_team_stats.csv', index=False)
+team_stats_data.to_csv('data/nba_team_stats.csv', index=False)
 
 print(f"Scraped and saved team stats for {len(game_urls)} games.")
