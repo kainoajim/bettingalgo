@@ -13,30 +13,31 @@ team_stats_data = pd.DataFrame()
 # Function to scrape both basic and advanced team stats for a single game
 def scrape_team_stats(game_url):
     print(f"Scraping {game_url}...")
+    match = game_url[-17:-5]
+    print(match)
     
     # Send a request to the box score page
     response = requests.get(game_url)
     soup = BeautifulSoup(response.content, 'html.parser')
 
+    # This section of code is to get the abbreviations for the teams
     # Find the meta tag that contains the og:description property
     meta_tag = soup.find('meta', {'property': 'og:description'})
-    
     if meta_tag:
         # Extract the content of the meta tag
-        content = meta_tag['content']
-        # print(f"Meta Content: {content}")
-        
+        content = meta_tag['content']       
         # Example: "PHI (117) vs BOS (126). Get the box score, shot charts and play by play summary..."
         # Split by ' vs ' to get the team abbreviations
         teams = content.split(' ')[0], content.split(' ')[3]
-        team1 = teams[0]  # PHI
-        team2 = teams[1]  # BOS
+        team1 = teams[0]  # away team
+        team2 = teams[1]  # home team
 
         print(f"Team 1: {team1}, Team 2: {team2}")
     else:
         print("Meta tag with og:description not found.")
         return
     
+    # the selectors are the names of the tables
     selectors = [f'box-{team1}-game-basic', f'box-{team2}-game-basic', f'box-{team1}-game-advanced', f'box-{team2}-game-advanced']
 
     dfs = []
@@ -46,23 +47,36 @@ def scrape_team_stats(game_url):
                 raw_df = pd.read_html(str(table))[0]
                 df = _process_box(raw_df)
                 team_totals_row = df[df['PLAYER'] == 'Team Totals']
+                # removes first column
                 team_totals_row = team_totals_row.drop(team_totals_row.columns[0], axis=1)
+                # add to team totals
                 if not team_totals_row.empty:
                     dfs.append(team_totals_row)
                 else:
                     print(f"Team Totals row not found for {selector}")
-                # if team1 in selector:
-                #     df['PLAYER'] = df['PLAYER'].apply(lambda name: remove_accents(name, team1, date.year))
-                # if team2 in selector:
-                #      df['PLAYER'] = df['PLAYER'].apply(lambda name: remove_accents(name, team2, date.year))
             else:
                 print(f"Table {selector} not found")
 
-    print(dfs)
+    # print(dfs)
     team1_basic = dfs[0]
     team2_basic = dfs[1]
     team1_advanced = dfs[2]
     team2_advanced = dfs[3]
+
+    # Add a winner variable
+    team1_points = float(team1_basic['PTS'].values[0])  # Get the points for Team 1
+    team2_points = float(team2_basic['PTS'].values[0])  # Get the points for Team 2
+
+    # Determine the winner
+    if team1_points > team2_points:
+        team1_basic['WIN'] = 1
+        team2_basic['WIN'] = 0
+    elif team2_points > team1_points:
+        team1_basic['WIN'] = 0
+        team2_basic['WIN'] = 1
+    else:  # In case of a tie (if needed)
+        team1_basic['WIN'] = 0
+        team2_basic['WIN'] = 0
 
     # Combine the basic and advanced stats for each team by concatenating the columns
     team1_combined = pd.concat([team1_basic.reset_index(drop=True), team1_advanced.reset_index(drop=True)], axis=1)
@@ -71,22 +85,16 @@ def scrape_team_stats(game_url):
     # Clean up NaN values by replacing them with 0 (or you can use any other value like None)
     team1_combined = team1_combined.fillna(0)
     team2_combined = team2_combined.fillna(0)
+    #insert game ID into stats
+    team1_combined.insert(0, 'gameID', match)
+    team2_combined.insert(0, 'gameID', match)
+    # insert team name into stats
     team1_combined.insert(0, 'Team', team1)
     team2_combined.insert(0, 'Team', team2)
-
-    # Optional: Add team labels or rename columns to make it clear which are basic and which are advanced
-    # Rename columns to differentiate between basic and advanced stats (optional but helpful for clarity)
-    # basic_cols = [f'{col}' for col in team1_basic.columns]
-    # advanced_cols = [f'{col}' for col in team1_advanced.columns[1:]]  # Exclude PLAYER from advanced stats, since it's duplicated
-    # team1_combined.columns = basic_cols + advanced_cols
-    # team2_combined.columns = basic_cols + advanced_cols
 
     # Ensure data is 2D before appending
     print(f"Team 1 combined shape: {team1_combined.shape}")
     print(f"Team 2 combined shape: {team2_combined.shape}")
-
-    # team_stats_data.append(team1_combined)
-    # team_stats_data.append(team2_combined)
 
     global team_stats_data
     team_stats_data = pd.concat([team_stats_data, team1_combined, team2_combined], ignore_index=True)
