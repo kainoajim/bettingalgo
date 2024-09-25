@@ -1,7 +1,11 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import numpy as np
 import time
+from io import StringIO
+
+pd.set_option('future.no_silent_downcasting', True)
 
 # Load the game URLs from the CSV file (you can adjust the path)
 df_game_urls = pd.read_csv('data/nba_game_urls.csv')
@@ -11,7 +15,7 @@ game_urls = df_game_urls['Game_URL'].tolist()
 team_stats_data = pd.DataFrame()
 
 # Function to scrape both basic and advanced team stats for a single game
-def scrape_team_stats(game_url):
+def scrape_team_stats(game_url, expected_columns):
     print(f"Scraping {game_url}...")
     match = game_url[-17:-5]
     print(match)
@@ -44,8 +48,9 @@ def scrape_team_stats(game_url):
     for selector in selectors:
             table = soup.find('table', { 'id': selector })
             if table:
-                raw_df = pd.read_html(str(table))[0]
+                raw_df = pd.read_html(StringIO(str(table)))[0]
                 df = _process_box(raw_df)
+                df = df.drop('MP', axis=1)
                 team_totals_row = df[df['PLAYER'] == 'Team Totals']
                 # removes first column
                 team_totals_row = team_totals_row.drop(team_totals_row.columns[0], axis=1)
@@ -69,22 +74,26 @@ def scrape_team_stats(game_url):
 
     # Determine the winner
     if team1_points > team2_points:
-        team1_basic['WIN'] = 1
-        team2_basic['WIN'] = 0
+        team1_basic.insert(0, 'WIN', 1)
+        team2_basic.insert(0, 'WIN', 0)
     elif team2_points > team1_points:
-        team1_basic['WIN'] = 0
-        team2_basic['WIN'] = 1
+        team1_basic.insert(0, 'WIN', 0)
+        team2_basic.insert(0, 'WIN', 1)
     else:  # In case of a tie (if needed)
-        team1_basic['WIN'] = 0
-        team2_basic['WIN'] = 0
+        team1_basic.insert(0, 'WIN', 0)
+        team2_basic.insert(0, 'WIN', 0)
+
+    # add a home/away variable
+    team1_basic.insert(1, 'HOME', 0) # is away
+    team2_basic.insert(1, 'HOME', 1) # is home
 
     # Combine the basic and advanced stats for each team by concatenating the columns
     team1_combined = pd.concat([team1_basic.reset_index(drop=True), team1_advanced.reset_index(drop=True)], axis=1)
     team2_combined = pd.concat([team2_basic.reset_index(drop=True), team2_advanced.reset_index(drop=True)], axis=1)
 
     # Clean up NaN values by replacing them with 0 (or you can use any other value like None)
-    team1_combined = team1_combined.fillna(0)
-    team2_combined = team2_combined.fillna(0)
+    team1_combined = team1_combined.fillna(0).infer_objects(copy=False)
+    team2_combined = team2_combined.fillna(0).infer_objects(copy=False)
     #insert game ID into stats
     team1_combined.insert(0, 'gameID', match)
     team2_combined.insert(0, 'gameID', match)
@@ -92,9 +101,13 @@ def scrape_team_stats(game_url):
     team1_combined.insert(0, 'Team', team1)
     team2_combined.insert(0, 'Team', team2)
 
+    # Align columns with expected columns and drop any extra columns
+    team1_combined = team1_combined.reindex(columns=expected_columns, fill_value=0)
+    team2_combined = team2_combined.reindex(columns=expected_columns, fill_value=0)
+
     # Ensure data is 2D before appending
-    print(f"Team 1 combined shape: {team1_combined.shape}")
-    print(f"Team 2 combined shape: {team2_combined.shape}")
+    # print(f"Team 1 combined shape: {team1_combined.shape}")
+    # print(f"Team 2 combined shape: {team2_combined.shape}")
 
     global team_stats_data
     team_stats_data = pd.concat([team_stats_data, team1_combined, team2_combined], ignore_index=True)
@@ -120,19 +133,23 @@ def _process_box(df):
     # df.insert(0, 'Team', team_name)
     return df
 
+expected_columns = [
+    'Team', 'GameID', 'WIN', 'HOME', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%',
+    'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 
+    'GmSc', '+/-', 'TS%', 'eFG%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 
+    'STL%', 'BLK%', 'TOV%', 'USG%', 'ORtg', 'DRtg'
+]
 
+# scrape_team_stats("https://www.basketball-reference.com/boxscores/202404160NOP.html", expected_columns)
 # Scrape the stats for all games
-for i, game_url in enumerate(game_urls[:3]):
-    scrape_team_stats(game_url)
+for i, game_url in enumerate(game_urls[:5]):
+    scrape_team_stats(game_url, expected_columns)
     
     # Add a small delay to avoid overwhelming the server
-    time.sleep(2)
+    time.sleep(1)
 
 # Define column headers for basic and advanced stats (you can adjust these based on your needs)
-columns = [
-    'Team', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%', 'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS',
-    'MP', 'TS%', 'eFG%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 'STL%', 'BLK%', 'TOV%', 'USG%', 'ORtg', 'DRtg', 'BPM'
-]
+
 
 # Convert the team stats data into a DataFrame
 # print(f"Team 1 combined shape: {team_stats_data.shape}")
