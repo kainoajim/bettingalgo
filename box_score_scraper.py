@@ -18,7 +18,7 @@ team_stats_data = pd.DataFrame()
 def scrape_team_stats(game_url, expected_columns):
     print(f"Scraping {game_url}...")
     match = game_url[-17:-5]
-    print(match)
+    # print(match)
     
     # Send a request to the box score page
     response = requests.get(game_url)
@@ -95,6 +95,7 @@ def scrape_team_stats(game_url, expected_columns):
     team1_combined = team1_combined.fillna(0).infer_objects(copy=False)
     team2_combined = team2_combined.fillna(0).infer_objects(copy=False)
     #insert game ID into stats
+    print(match)
     team1_combined.insert(0, 'gameID', match)
     team2_combined.insert(0, 'gameID', match)
     # insert team name into stats
@@ -134,19 +135,19 @@ def _process_box(df):
     return df
 
 expected_columns = [
-    'Team', 'GameID', 'WIN', 'HOME', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%',
+    'Team', 'gameID', 'WIN', 'HOME', 'FG', 'FGA', 'FG%', '3P', '3PA', '3P%',
     'FT', 'FTA', 'FT%', 'ORB', 'DRB', 'TRB', 'AST', 'STL', 'BLK', 'TOV', 'PF', 'PTS', 
-    'GmSc', '+/-', 'TS%', 'eFG%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 
+    'TS%', 'eFG%', '3PAr', 'FTr', 'ORB%', 'DRB%', 'TRB%', 'AST%', 
     'STL%', 'BLK%', 'TOV%', 'USG%', 'ORtg', 'DRtg'
 ]
 
 # scrape_team_stats("https://www.basketball-reference.com/boxscores/202404160NOP.html", expected_columns)
 # Scrape the stats for all games
-for i, game_url in enumerate(game_urls[:5]):
+for i, game_url in enumerate(game_urls):
     scrape_team_stats(game_url, expected_columns)
     
     # Add a small delay to avoid overwhelming the server
-    time.sleep(1)
+    time.sleep(2)
 
 # Define column headers for basic and advanced stats (you can adjust these based on your needs)
 
@@ -156,6 +157,6 @@ for i, game_url in enumerate(game_urls[:5]):
 # df_team_stats = pd.DataFrame(team_stats_data, columns=columns)
 
 # Save the combined basic and advanced stats to a CSV file
-team_stats_data.to_csv('data/nba_team_stats.csv', index=False)
+team_stats_data.to_csv('data/nba_team_stats_2024.csv', index=False)
 
 print(f"Scraped and saved team stats for {len(game_urls)} games.")
