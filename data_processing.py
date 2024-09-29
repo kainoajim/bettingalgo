@@ -3,6 +3,8 @@ import pandas as pd
 # Load the full dataset
 df = pd.read_csv('data/nba_team_stats_2024.csv')
 
+betting_data = pd.read_csv('data/nba_spreads_totals.csv')
+
 result_df = df[['Team', 'gameID', 'HOME', 'PTS']]
 
 # List of stats for which we want to calculate rolling averages
@@ -62,6 +64,10 @@ for game_id in rolling_df['gameID'].unique():
     home_team = game_data[game_data['HOME'] == 1]
     away_team = game_data[game_data['HOME'] == 0]
 
+    # home_team_name = home_team['Team']
+    # away_team_name = away_team['Team']
+    # print(home_team_name)
+
     game_result = result_df[result_df['gameID'] == game_id]
     home_result = game_result[game_result['HOME'] == 1]
     away_result = game_result[game_result['HOME'] == 0]
@@ -74,8 +80,14 @@ for game_id in rolling_df['gameID'].unique():
     combined_row = pd.concat([home_team.reset_index(drop=True), away_team.reset_index(drop=True)], axis=1)
 
     # Add the actual scores as target variables
+    # combined_row['Home_Team'] = home_team_name
+    # combined_row['Away_Team'] = away_team_name
+
+    # Add the actual scores as target variables
     combined_row['Home_Score'] = home_result['PTS'].values[0]
     combined_row['Away_Score'] = away_result['PTS'].values[0]
+
+
     
     # Append to the final dataset
     final_dataset = pd.concat([final_dataset, combined_row], ignore_index=True)
@@ -83,7 +95,20 @@ for game_id in rolling_df['gameID'].unique():
 final_dataset = final_dataset.round(6)
 
 # comment this out if you want to bring back the team and gameID for checking
-final_dataset = final_dataset.drop(columns=['Team', 'gameID'])
+final_dataset = final_dataset.drop(columns=['Team'])
+
+# Remove duplicate 'gameID' column from final_dataset
+final_dataset = final_dataset.loc[:, ~final_dataset.columns.duplicated()]
+
+print(final_dataset.columns[final_dataset.columns.duplicated()])
+
+print(betting_data.columns[betting_data.columns.duplicated()])
+
+
+# Merge the final_dataset with the betting data using 'gameID' as the key
+merged_dataset = pd.merge(final_dataset, betting_data[['gameID', 'spread', 'total']], on='gameID', how='inner')
+
+# merged_dataset = merged_dataset.drop(columns=['gameID'])
 
 # Now the dataset is ready for model training
-final_dataset.to_csv('data/nba_model_training_data.csv', index=False)
+merged_dataset.to_csv('data/nba_model_training_data.csv', index=False)

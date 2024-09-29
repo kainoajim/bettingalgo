@@ -6,8 +6,9 @@ import pandas as pd
 base_url = "https://www.basketball-reference.com/leagues/NBA_{}_games-{}.html"
 
 # List of seasons to scrape (you can adjust the range)
-seasons = [2024]  # Latest 5 seasons
-months = ["october", "november", "december", "january", "february", "march", "april", "may", "june"]
+seasons = [2022, 2023]  # Latest 5 seasons
+# months = ["october", "november", "december", "january", "february", "march", "april", "may", "june"]
+months = ["december", "january", "february", "march", "april", "may", "june", "july"]
 
 # List to hold all game URLs
 game_urls = []
@@ -38,6 +39,6 @@ for season in seasons:
 
 # Save the game URLs to a CSV file for future use
 df_game_urls = pd.DataFrame(game_urls, columns=['Game_URL'])
-df_game_urls.to_csv('data/nba_game_urls.csv', index=False)
+df_game_urls.to_csv('data/nba_game_urls_2021.csv', index=False)
 
 print(f"Scraped {len(game_urls)} game URLs.")
