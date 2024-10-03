@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the full dataset
-df = pd.read_csv('data/nba_team_stats_2024.csv')
+df = pd.read_csv('data/nba_team_stats_2022-2024.csv')
 
 betting_data = pd.read_csv('data/nba_spreads_totals.csv')
 
@@ -100,9 +100,9 @@ final_dataset = final_dataset.drop(columns=['Team'])
 # Remove duplicate 'gameID' column from final_dataset
 final_dataset = final_dataset.loc[:, ~final_dataset.columns.duplicated()]
 
-print(final_dataset.columns[final_dataset.columns.duplicated()])
+# print(final_dataset.columns[final_dataset.columns.duplicated()])
 
-print(betting_data.columns[betting_data.columns.duplicated()])
+# print(betting_data.columns[betting_data.columns.duplicated()])
 
 
 # Merge the final_dataset with the betting data using 'gameID' as the key

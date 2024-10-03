@@ -8,7 +8,7 @@ from io import StringIO
 pd.set_option('future.no_silent_downcasting', True)
 
 # Load the game URLs from the CSV file (you can adjust the path)
-df_game_urls = pd.read_csv('data/nba_game_urls.csv')
+df_game_urls = pd.read_csv('data/nba_game_urls_2022_2023.csv')
 game_urls = df_game_urls['Game_URL'].tolist()
 
 # List to store team stats data
@@ -157,6 +157,6 @@ for i, game_url in enumerate(game_urls):
 # df_team_stats = pd.DataFrame(team_stats_data, columns=columns)
 
 # Save the combined basic and advanced stats to a CSV file
-team_stats_data.to_csv('data/nba_team_stats_2024.csv', index=False)
+team_stats_data.to_csv('data/nba_team_stats_2022_2023.csv', index=False)
 
 print(f"Scraped and saved team stats for {len(game_urls)} games.")

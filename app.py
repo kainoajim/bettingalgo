@@ -1,26 +1,29 @@
+from flask import Flask, request, jsonify
+import joblib
 import pandas as pd
-from flask import Flask, render_template
 
 app = Flask(__name__)
 
-def load_data():
-    df = pd.read_csv('data/historical_data.csv')
-    return df
+# Load the models
+home_model = joblib.load('models/home_score_model.pkl')
+away_model = joblib.load('models/away_score_model.pkl')
 
-@app.route('/')
-def index():
-    df = load_data()
-    # Sample logic: Calculate your lines based on data
-    your_lines = {'Team A vs Team B': -7.0, 'Team C vs Team D': 2.5}
-    sportsbook_lines = {'Team A vs Team B': -5.5, 'Team C vs Team D': 3.0}
-
-    value_bets = []
-    for game, sportsbook_line in sportsbook_lines.items():
-        your_line = your_lines[game]
-        if abs(your_line - sportsbook_line) > 1.5:
-            value_bets.append({'game': game, 'sportsbook_line': sportsbook_line, 'your_line': your_line})
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Get the data from the request
+    input_data = request.json['data']
     
-    return render_template('index.html', value_bets=value_bets)
+    # Convert input data to DataFrame (assuming the input is in JSON format)
+    input_df = pd.DataFrame(input_data)
+    
+    # Make predictions
+    home_pred = home_model.predict(input_df)
+    away_pred = away_model.predict(input_df)
+    
+    return jsonify({
+        'home_score_prediction': home_pred.tolist(),
+        'away_score_prediction': away_pred.tolist()
+    })
 
 if __name__ == '__main__':
     app.run(debug=True)
